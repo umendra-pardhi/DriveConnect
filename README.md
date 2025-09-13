@@ -79,21 +79,7 @@ A simple and responsive car service booking platform with client, service provid
 ### Admin
 - `GET /api/admin/users` - Get all users (admin only)
 
-## Project Structure
 
-```
-driveconnect/
-├── server.js              # Main Express server
-├── package.json           # Dependencies and scripts
-├── index.html             # Home page
-├── login.html             # Login page
-├── register.html          # Registration page
-├── client-dashboard.html  # Client dashboard
-├── provider-dashboard.html # Service provider dashboard
-├── admin-dashboard.html   # Admin dashboard
-├── assets/               # Static assets (images)
-└── README.md             # This file
-```
 
 ## Features Overview
 
@@ -121,7 +107,7 @@ driveconnect/
 ## Technology Stack
 
 - **Backend**: Node.js, Express.js
-- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+) , Ejs
 - **Styling**: Tailwind CSS
 - **Icons**: Font Awesome
 - **Charts**: Chart.js
@@ -150,18 +136,3 @@ driveconnect/
   - Rate limiting
   - CORS configuration
 
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
-
-## License
-
-MIT License - feel free to use this project for learning or commercial purposes.
-
----
-
-**Note**: This is a demo application. For production use, implement proper security measures, database storage, and error handling. 
