@@ -1,0 +1,35 @@
+   <script
+  async
+  crossorigin="anonymous"
+  data-clerk-publishable-key="pk_test_cHJlY2lvdXMtZmF3bi02My5jbGVyay5hY2NvdW50cy5kZXYk"
+  src="https://precious-fawn-63.clerk.accounts.dev/npm/@clerk/clerk-js@5/dist/clerk.browser.js"
+  type="text/javascript">
+</script>
+
+
+
+<script>
+ window.addEventListener("load", async () => {
+      try {
+        // 1. Load Clerk
+        await Clerk.load();
+
+        // 2. Complete the sign-in process after redirect
+        const user = await Clerk.handleRedirectCallback();
+
+        // 3. Get the user's unsafe metadata (e.g., role)
+        const metadata = user?.unsafeMetadata || {};
+        const role = metadata.role || 'client';
+
+        // 4. Redirect based on role
+        if (role === 'service_provider') {
+          window.location.href = '/provider-dashboard';
+        } else {
+          window.location.href = '/client-dashboard';
+        }
+      } catch (err) {
+        console.error('OAuth Callback Error:', err);
+        document.body.innerHTML = "<p>Sign-in failed. Please try again.</p>";
+      }
+    });
+</script>
